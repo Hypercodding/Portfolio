@@ -93,7 +93,10 @@ const Hero = () => {
           >
             <img src="/instagram.png" alt="" />
           </motion.a>
-          <motion.a variants={followVariants} href="/">
+          <motion.a
+            variants={followVariants}
+            href="https://www.facebook.com/get.jobs.50"
+          >
             <img src="/facebook.png" alt="" />
           </motion.a>
           {/* <motion.a variants={followVariants} href="/">
