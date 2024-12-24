@@ -1,5 +1,38 @@
+import { useRef } from "react";
 import ComputerModelContainer from "./computer/ComputerModelContainer";
 import "./services.css";
+import { motion, useInView } from "motion/react";
+
+const textVarient = {
+  initial: {
+    x: -100,
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const listVarient = {
+  initial: {
+    x: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 const services = [
   {
@@ -23,13 +56,32 @@ const services = [
 ];
 
 const Services = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-200px" });
   return (
-    <div className="services">
+    <div className="services" ref={ref}>
       <div className="sSection left">
-        <h1 className="sTitle">How do I help?</h1>
-        <div className="serviceList">
+        <motion.h1
+          variants={textVarient}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          className="sTitle"
+        >
+          How do I help?
+        </motion.h1>
+        <motion.div
+          variants={listVarient}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          className="serviceList"
+        >
           {services.map((service) => (
-            <div className="service" key={service.id}>
+            <motion.div
+              variants={listVarient}
+              // initial="initial"
+              className="service"
+              key={service.id}
+            >
               <div className="serviceIcon">
                 <img src={service.img} alt="" />
               </div>
@@ -37,9 +89,9 @@ const Services = () => {
                 <h2>{service.title}</h2>
                 <h3>{service.counter} Projects</h3>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
       <div className="sSection right">
         <ComputerModelContainer />
