@@ -30,7 +30,7 @@
 
 .service {
     margin-top: 10px;
-    width: 100%;
+    width: 70%;
     padding: 30px;
     border-radius: 20px;
     background-color: #2f213f;
@@ -76,3 +76,40 @@
 .service:nth-child(3) .serviceIcon {
     background-color: #6c5c0c;
 }
+
+
+
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+    .sTitle {
+        font-size: 30px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .services {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sSection {
+        width: 100%;
+    }
+
+    .sSection.right {
+        display: none;
+    }
+}
+
+
+/* @media (max-width: 506px) {
+    .himg img {
+      height: 1px;
+      width: 10px;
+    }
+  } */

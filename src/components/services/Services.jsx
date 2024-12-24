@@ -6,26 +6,26 @@ const services = [
     id: 1,
     img: "/service1.png",
     title: "Web Development",
-    counter: 35,
+    counter: 3,
   },
   {
     id: 2,
     img: "/service2.png",
     title: "Frontend Projects",
-    counter: 23,
+    counter: 2,
   },
   {
     id: 3,
     img: "/service3.png",
     title: "Full Stack Applications",
-    counter: 46,
+    counter: 4,
   },
 ];
 
 const Services = () => {
   return (
     <div className="services">
-      <div className="sSectionleft">
+      <div className="sSection left">
         <h1 className="sTitle">How do I help?</h1>
         <div className="serviceList">
           {services.map((service) => (
