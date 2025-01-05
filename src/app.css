@@ -1,0 +1,56 @@
+html {
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    /* Ensure each section takes full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't cause overflow */
+}
+
+#portfolio {
+    background-color: #f0f0f0;
+    /* Optional: Add a background color for visibility */
+}
+
+#contact {
+    background-color: #e0e0e0;
+    /* Optional: Add a background color for visibility */
+}
+
+@media (max-width: 768px) {
+
+    /* Adjustments for mobile screens */
+    section {
+        padding: 15px;
+        /* Reduce padding on smaller screens */
+    }
+
+    #portfolio,
+    #contact {
+        min-height: auto;
+        /* Let sections take only as much height as needed */
+        padding-bottom: 30px;
+        /* Add bottom padding to ensure sections are separated */
+    }
+
+    .container {
+        margin: 0;
+        /* Ensure no margin overflow */
+    }
+
+    /* Optional: Reduce the height of portfolio and contact for smaller screens */
+    #portfolio {
+        margin-bottom: 50px;
+        /* Add space between sections */
+    }
+}

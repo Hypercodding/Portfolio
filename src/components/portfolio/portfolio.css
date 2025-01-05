@@ -1,134 +1,131 @@
-.portfolio {
-    height: 600vh;
-    position: relative;
-}
+/* Portfolio CSS - Add these styles for slick carousel */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
-.pList {
-    position: sticky;
-    top: 0;
-    display: flex;
-    height: 100vh;
-    width: max-content;
+
+/* .portfolio { */
+/* } */
+
+.portfolio-section {
+    /* padding: 20px; */
+    /* display: flex; */
+    /* justify-content: center;
+        align-items: center; */
+    /* width: 100%; */
 }
 
 .pItem {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
     display: flex;
+    height: 100vh;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 100px;
-}
-
-/* .pItem:nth-child(1) {
-    background: linear-gradient(to right, #12071f, #210b3a);
-  }
-  .pItem:nth-child(2) {
-    background: linear-gradient(to right, #210b3a, #27084a);
-  }
-  .pItem:nth-child(3) {
-    background: linear-gradient(to right, #27084a, #220345);
-  }
-  .pItem:nth-child(4) {
-    background: linear-gradient(to right, #220345, #2a0159);
-  }
-  .pItem:nth-child(5) {
-    background: linear-gradient(to right, #2a0159, #12071f);
-  } */
-
-/* WE'LL NOT GIVE BACKGROUND COLOR TO THE FIRST AND LAST ITEMS (to keep scrolling effect consistent) */
-.pItem:nth-child(3) {
-    background: linear-gradient(to right, transparent, #260622);
-}
-
-.pItem:nth-child(4) {
-    background: linear-gradient(to right, #260622, #02222e);
-}
-
-.pItem:nth-child(5) {
-    background: linear-gradient(to right, #02222e, #12071f);
-}
-
-.pItem:nth-child(6) {
-    background: linear-gradient(to right, #12071f, transparent);
-}
-
-.pProgress {
-    position: sticky;
-    width: 80px;
-    height: 80px;
-    left: 0;
-    bottom: 80%;
-}
-
-.pImg {
-    width: 40%;
-    border-radius: 20px;
+    /* background: #fff; */
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pImg img {
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 10%; */
     object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    position: relative;
 }
 
 .pText {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 12px;
+    backdrop-filter: blur(1px);
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    color: white;
+
+    margin-top: 4.5%;
 }
 
 .pText h1 {
-    font-size: 56px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .pText p {
-    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .pText button {
-    background-color: pink;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgb(73, 5, 129);
+    color: white;
     border: none;
-    font-weight: 500;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-@media (max-width: 1536px) {
-    .pItem {
-        gap: 50px;
-    }
+.pText button:hover {
+    background-color: #c33f55;
 }
 
-@media (max-width: 1280px) {
-    .pText h1 {
-        font-size: 48px;
-    }
+/* Styling for the carousel dots (optional) */
+.slick-dots {
+    bottom: 10px;
+    text-align: center;
 }
 
-@media (max-width: 1024px) {
-    .pItem {
-        flex-direction: column;
-    }
+.slick-dots li button:before {
+    color: #dd4c62;
+}
 
-    .pImg,
+@media (max-width: 1500px) {
+
     .pText {
-        width: 80%;
+        position: absolute;
     }
 
-    .pProgress {
-        bottom: 100px;
-        left: 100%;
+    /* Customize the appearance on medium screens */
+    .pItem {
+        width: 90%;
+        /* Shrink the items on smaller screens */
     }
 }
 
 @media (max-width: 768px) {
-    .pProgress {
-        width: 50px;
-        height: 50px;
+    .portfolio-section {
+        /* padding: 30px; */
+        margin: 0;
+        /* padding: 0; */
+        /* width: 90%; */
+        /* height: 9vh; */
+    }
+
+    .pItem {
+        border: none;
+    }
+
+    .pImg img {
+        width: 100%;
+        /* height: 100%; */
+        margin-top: 100px;
+
+        border-radius: 10px;
+    }
+
+    .pText {
+        position: relative;
+        margin-top: 60px;
+        background-color: none;
+    }
+
+
+    /* Customize the appearance on smaller screens */
+    .pItem {
+        width: 100%;
+        /* Take up full width */
     }
 }

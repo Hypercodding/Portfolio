@@ -2,8 +2,7 @@ import Contact from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
-
-import Mesh from "./components/Mesh";
+// import "./app.css";
 
 const App = () => {
   return (
@@ -16,11 +15,15 @@ const App = () => {
         <Services />
       </section>
 
-      {/* <section id="#portfolio"> */}
-      <Portfolio />
-      {/* </section> */}
+      <section id="portfolio">
+        {" "}
+        {/* Fixed the id here */}
+        <Portfolio />
+      </section>
 
-      <section id="#contact">
+      <section id="contact">
+        {" "}
+        {/* Fixed the id here */}
         <Contact />
       </section>
     </div>
