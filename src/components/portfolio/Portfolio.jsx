@@ -54,7 +54,7 @@ const textVariants = {
     transition: {
       duration: 0.5,
       ease: "easeInOut",
-      staggerChildren: 0.1,
+      // staggerChildren: 0.1,
     },
   },
 };
@@ -116,7 +116,7 @@ const Portfolio = () => {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
