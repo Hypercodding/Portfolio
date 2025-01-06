@@ -24,7 +24,7 @@ const items = [
     img: "/chatio.PNG",
     title: "Real-time Chat Application",
     desc: "",
-    link: "/",
+    link: "https://textio.vercel.app",
   },
 ];
 
@@ -103,7 +103,7 @@ const ListItem = ({ item }) => {
       >
         <motion.h1 variants={textVariants}>{item.title}</motion.h1>
         <motion.p variants={textVariants}>{item.desc}</motion.p>
-        <motion.a variants={textVariants} href={item.link}>
+        <motion.a variants={textVariants} href={item.link} target="blank">
           <button>View Project</button>
         </motion.a>
       </motion.div>
