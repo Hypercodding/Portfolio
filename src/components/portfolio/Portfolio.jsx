@@ -7,23 +7,23 @@ import "./portfolio.css";
 const items = [
   {
     id: 1,
-    img: "/p1.jpg",
-    title: "Full Stack Blog Application",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    link: "/",
+    img: "/payam.PNG",
+    title: "Introduction Website",
+    desc: "Introducing the personality freelnace project.",
+    link: "/https://payamehaq.com/",
   },
   {
     id: 2,
-    img: "/p2.jpg",
-    title: "School Management System",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-    link: "/",
+    img: "/login_signup.PNG",
+    title: "Full Stack Blog Application",
+    desc: "Figma design Login Signup implemented.",
+    link: "https://figma-login-signup.vercel.app/",
   },
   {
     id: 3,
-    img: "/p3.jpg",
+    img: "/chatio.PNG",
     title: "Real-time Chat Application",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    desc: "",
     link: "/",
   },
 ];
@@ -113,13 +113,14 @@ const ListItem = ({ item }) => {
 
 const Portfolio = () => {
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "0",
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Set autoplay speed in milliseconds (3 seconds in this case)
   };
 
   return (
