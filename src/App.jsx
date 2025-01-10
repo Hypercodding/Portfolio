@@ -3,6 +3,7 @@ import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
 import "./app.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         {/* Fixed the id here */}
         <Contact />
       </section>
+      <Analytics />
     </div>
   );
 };
